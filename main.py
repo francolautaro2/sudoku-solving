@@ -22,7 +22,7 @@ def solve(grid, row, col, num):
                 return False
     return True
  
-def Suduko(grid, row, col):
+def su(grid, row, col):
  
     if (row == M - 1 and col == M):
         return True
@@ -30,20 +30,21 @@ def Suduko(grid, row, col):
         row += 1
         col = 0
     if grid[row][col] > 0:
-        return Suduko(grid, row, col + 1)
+        return su(grid, row, col + 1)
     for num in range(1, M + 1, 1): 
      
         if solve(grid, row, col, num):
          
             grid[row][col] = num
-            if Suduko(grid, row, col + 1):
+            if su(grid, row, col + 1):
                 return True
         grid[row][col] = 0
     return False
  
-'''0 means the cells where no value is assigned'''
-grid = [[2, 5, 0, 0, 3, 0, 9, 0, 1],
-        [0, 1, 0, 0, 0, 4, 0, 0, 0],
+
+BOARD = [
+    [2, 5, 0, 0, 3, 0, 9, 0, 1],
+    [0, 1, 0, 0, 0, 4, 0, 0, 0],
     [4, 0, 7, 0, 0, 0, 2, 0, 8],
     [0, 0, 5, 2, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 9, 8, 1, 0, 0],
@@ -52,7 +53,7 @@ grid = [[2, 5, 0, 0, 3, 0, 9, 0, 1],
     [0, 7, 0, 0, 0, 0, 0, 0, 3],
     [9, 0, 3, 0, 0, 0, 6, 0, 4]]
  
-if (Suduko(grid, 0, 0)):
-    puzzle(grid)
+if (su(BOARD, 0, 0)):
+    puzzle(BOARD)
 else:
     print("Solution does not exist:(")
