@@ -1,9 +1,16 @@
+
+
 M = 9
+
+
 def puzzle(a):
     for i in range(M):
         for j in range(M):
             print(a[i][j],end = " ")
         print()
+
+
+
 def solve(grid, row, col, num):
     for x in range(9):
         if grid[row][x] == num:
