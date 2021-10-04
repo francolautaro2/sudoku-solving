@@ -16,6 +16,7 @@ class display():
         pygame.display.set_caption('Sudoku solve')
      
         
+   
     def draw_board(self):
         font1 = pygame.font.SysFont("comicsans", 40)
         dif = 900/9
