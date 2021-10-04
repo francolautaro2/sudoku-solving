@@ -1,14 +1,11 @@
 
-
 M = 9
-
 
 def puzzle(a):
     for i in range(M):
         for j in range(M):
             print(a[i][j],end = " ")
         print()
-
 
 
 def solve(grid, row, col, num):
@@ -48,7 +45,6 @@ def su(grid, row, col):
         grid[row][col] = 0
     return False
  
-
 BOARD = [
     [2, 5, 0, 0, 3, 0, 9, 0, 1],
     [0, 1, 0, 0, 0, 4, 0, 0, 0],
