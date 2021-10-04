@@ -48,7 +48,6 @@ BOARD = [
     ]
 
 
-
 board1 = display(BOARD)
 while 1: 
     for event in pygame.event.get():
