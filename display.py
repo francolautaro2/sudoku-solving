@@ -16,7 +16,10 @@ class display():
         pygame.display.set_caption('Sudoku solve')
      
         
+<<<<<<< HEAD
    
+=======
+>>>>>>> 61b9e6148c9d0ee39295acf0e20153fb74da0883
     def draw_board(self):
         font1 = pygame.font.SysFont("comicsans", 40)
         dif = 900/9
@@ -60,4 +63,8 @@ while 1:
         if event.type == pygame.QUIT:
             pygame.quit() 
 
+<<<<<<< HEAD
         pygame.display.flip()
+=======
+        pygame.display.flip()
+>>>>>>> 61b9e6148c9d0ee39295acf0e20153fb74da0883
