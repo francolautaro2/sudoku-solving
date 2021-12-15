@@ -1,5 +1,5 @@
 import pygame
-import solve
+from solve import su, puzzle
 
 class display():
     def __init__(self,grid):
@@ -45,10 +45,15 @@ BOARD = [
     [0, 0, 0, 3, 6, 0, 0, 7, 2],
     [0, 7, 0, 0, 0, 0, 0, 0, 3],
     [9, 0, 3, 0, 0, 0, 6, 0, 4]
-    ]
+]
+
 
 
 board1 = display(BOARD)
+if (su(BOARD, 0,0)):
+    puzzle(BOARD)
+else:
+    print('no fue posible resolver el sudoku')
 while 1: 
     for event in pygame.event.get():
         #call function board
